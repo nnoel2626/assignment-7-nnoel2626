@@ -1,0 +1,12 @@
+<router-outlet></router-outlet>
+<div class="container">
+  <h2>There are a toatal of {{ getNumberOfEquipment() }} Equipment.</h2>
+  <p>Total Votes Received: {{ totalVotes }}, Most Recent Vote Recipient: {{ mostRecentVotedOn }}</p>
+  <hr>
+  <div class="row">
+    <app-equipment class="col-sm-3" *ngFor='let equipmentObject of equipmentList' [equipment]="equipmentObject"
+      (newEquipment)="updateEquipmentList()" [baseUrl]="EquipmentUrl" (upvotedEvent)="handleUpvoted($event)">
+    </app-equipment>
+
+  </div>
+</div>

@@ -1,0 +1,60 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1.text-primary,
+h2.text-secondary {
+  text-align: center;
+}
+
+.login {
+  font: bold;
+  font-size: 32px;
+  text-align: center;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.nav {
+  border: 1px solid #ccc;
+  border-width: 1px 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 10px;
+}
+
+/* ul.nav.nav-pills {
+  text-align: right;
+}
+
+.nav-pills>li {
+  float: none;
+  display: inline-block;
+} */
+
+.container {
+  /* margin-left: auto; */
+  /* padding-right: 15px; */
+  /* padding-left: 15px; */
+}
+
+.table .table-bordered .table-striped {
+  margin-left: 200px;
+}

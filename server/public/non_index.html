@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+ <html>
+
+ <head>
+     <title>Testing the API</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ </head>
+
+ <body class="vsc-initialized">
+     <div class="container">
+         <h3>Rental Shop API test</h3>
+         <p>This HTML/JS page tests the Equipment API by listing all; then creating, finding, modifying, and deleting a
+             equipment resource using
+             the REST API. A few notes:
+             <ul>
+                 <li>/js/api.js file linked in this HTML page. </li>
+                 <li>This test file was created Larry and was modified to use FormData in the
+                     JS,for your POST/create operation . </li>
+                 <li>API endpoints, property names and values for the example equipment app
+                 <li>came from the process formData that got submitted when the testme button is pressed.</li>
+                 <li>See the console for output as the process completes.</li>
+                 <li> See picture below</li> <br>
+                 <img src="images/api_process.png" alt="api-crud-process" width="800" height="600">
+
+             </ul>
+         </p>
+         <div class="row">
+             <div class="col-md-6 col-md-offset-3">
+                 <form id="formId" method="POST" action="/rental/add-equipment" encrypt="multipart/form-data">
+                     <div class="form-group">
+                         <label for="name">Name</label>
+                         <input class="form-control" id="name" type="text" placeholder="name" name="name" />
+                     </div>
+                     <div class="form-group">
+                         <label for="brand">Brand</label>
+                         <input class="form-control" id="brand" type="text" placeholder="brand" name="brand" />
+                     </div>
+                     <div class="form-group">
+                         <label for="model">Model</label>
+                         <input class="form-control" id="model" type="text" placeholder="model" name="model" />
+                     </div>
+                     <div class="form-group">
+                         <label for="serialNumber">Serial Number</label>
+                         <input class="form-control" id="serialNumber" type="text" placeholder="serialNumber"
+                             name="serialNumber" />
+                     </div>
+                     <div class="form-group">
+                         <label for="price">Price</label>
+                         <input id="price" type="text" placeholder="price" name="price" />
+                     </div>
+                     <div class="form-group">
+                         <label for="imageUrl">ImageUrl</label>
+                         <input class="form-control" id="imageUrl" type="text" placeholder="imageUrl" name="imageUrl" />
+                     </div>
+                     <!-- <button class="btn btn-info btn-lg form-control" type="submit">Add Equipment</button> -->
+                     <button class="btn btn-primary" id="testme" type="button">Test the API</button>
+                     <!-- <button id="runtests">Test REST API</button> -->
+                 </form>
+
+             </div>
+         </div>
+     </div>
+     <script type="text/javascript" src="js/api.js"></script>
+ </body>
+
+ </html>

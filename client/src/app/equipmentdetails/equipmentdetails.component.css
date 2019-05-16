@@ -1,0 +1,19 @@
+.p-4 {
+  padding: 1.5rem !important;
+  text-align: center;
+}
+
+
+.mr-1,
+.mx-1 {
+  margin-right: .25rem !important;
+  text-align: center;
+}
+
+/* type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled), */
+button:not(:disabled) {
+  cursor: pointer;
+  margin: .3em;
+}

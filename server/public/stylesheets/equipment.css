@@ -1,0 +1,25 @@
+.equipment-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+}
+
+.equipment-item {
+    width: 20rem;
+    max-width: 95%;
+}
+
+.equipment__name {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.equipment__brand,
+.equipment__model,
+.equipment__serialNumber,
+.equipment__price,
+.equipment__price {
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}

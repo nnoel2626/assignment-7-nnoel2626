@@ -1,0 +1,60 @@
+<h3> Add equipment</h3>
+<form #newequipmentForm="ngForm" (ngSubmit)="createEquipment(newequipmentForm)">
+  <div class="form-group">
+    <label>Name:
+      <input name="nameField" required minlength="2" #name="ngModel" placeholder="name" class="form-control"
+        [(ngModel)]="equipment.name">
+    </label>
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+      <div *ngIf="name.errors.minlength">
+        Name must be at least 2 characters long.
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Brand:
+      <input name="brandField" placeholder="brand" #brand="ngModel" class="form-control" [(ngModel)]="equipment.brand">
+    </label>
+    <div *ngIf="brand.invalid && (brand.dirty || brand.touched)" class="alert alert-danger">
+      <div *ngIf="brand.errors.minlength">
+        brand must be at least 2 characters long.
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="form-group">
+    <label>Model:
+      <input name="modelField" placeholder="model" #model="ngModel" class="form-control" [(ngModel)]="equipment.model">
+    </label>
+    <div *ngIf="model.invalid && (model.dirty || model.touched)" class="alert alert-danger">
+      <div *ngIf="model.errors.minlength">
+        model must be at least 2 characters long.
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>SerialNumber:
+      <input name="serialNumberField" placeholder="serialNumber" #serialNumber="ngModel" class="form-control"
+        [(ngModel)]="equipment.serialNumber">
+    </label>
+    <div *ngIf="serialNumber.invalid && (serialNumber.dirty || serialNumber.touched)" class="alert alert-danger">
+      <div *ngIf="serialNumber.errors.minlength">
+        You must enter a 5 digit serialNumber.
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Price:
+      <input name="priceField" placeholder="price" #price="ngModel" class="form-control" [(ngModel)]="equipment.price">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>ImageUrl:
+      <input name="imageUrlField" placeholder="imageUrl" #imageUrl="ngModel" class="form-control"
+        [(ngModel)]="equipment.imageUrl">
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!newequipmentForm.valid">save</button>
+</form>
+<br>
+<a class="btn btn-link" routerLink="/gallery">back to gallery</a>

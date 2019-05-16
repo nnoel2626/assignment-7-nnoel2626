@@ -1,0 +1,12 @@
+.equipment a {
+  text-decoration: none;
+  color: black;
+}
+
+.equipment:hover {
+  background-color: #f4f4f4;
+}
+
+.card-body {
+  margin: 2em;
+}

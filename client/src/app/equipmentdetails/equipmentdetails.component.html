@@ -1,0 +1,49 @@
+<div *ngIf="equipment">
+  <h3> Equipment Details:</h3>
+  <div class="detailequipment"><img src="{{ equipmentdisplayurl }}"></div>
+
+  <div *ngIf="!editing">
+    <div><span>Name: </span> {{ equipment.name }}</div>
+    <div><span>brand: </span>{{equipment.brand}}</div>
+    <div><span>model: </span> {{equipment.model}}</div>
+    <div><span>serialNumber: </span>{{equipment.serialNumber}}</div>
+    <div><span>price: </span> {{equipment.price}}</div>
+    <div><span>imageUrl: </span>{{ equipment.imageUrl }}</div>
+    <div><span>Updated: </span>{{equipment.updatedAt }} | <span>Created: </span>{{ equipment.createdAt }}</div>
+    <button class="btn btn-link" (click)="setEditMode(true)">edit</button>
+    <a class="btn btn-link" routerLink="/gallery">back to gallery</a>
+
+    <a> <button class="btn btn-primary btn-md my-0 p" routerLink="/newEquipment">
+        <span class="badge red mr-1">Create</span></button>
+    </a>
+  </div>
+
+</div>
+
+<div *ngIf="editing">
+  <form #form="ngForm" (ngSubmit)="updateEquipment(form.value)">
+    <div class="form-group">
+      <label for="nameField">Name:</label>
+      <input name="nameField" class="form-control" [ngModel]="equipment.name">
+
+      <label for="brandField">Brand:</label>
+      <input name="brandField" class="form-control" [ngModel]="equipment.brand">
+
+      <label for="modelField">Model:</label>
+      <input name="modelField" class="form-control" [ngModel]="equipment.model">
+
+      <label for="serialNumberField">Serial Number:</label>
+      <input name="serialNumberField" class="form-control" [ngModel]="equipment.serialNumber">
+
+      <label for="priceField">Price:</label>
+      <input name="priceField" class="form-control" [ngModel]="equipment.price">
+
+      <label for="imageUrlField">Image:</label>
+      <input name="imageUrlField" class="form-control" [ngModel]="equipment.imageUrl">
+
+    </div>
+    <button type="submit">save</button>
+    <button type="button" (click)="setEditMode(false)">cancel</button>
+    <button type="button" (click)="deleteEquipment()">delete this equipment</button>
+  </form>
+</div>

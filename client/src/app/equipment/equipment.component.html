@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-body equipment">
+    <a routerLink="/equipment/{{equipment._id}}">
+      <img class="card-img-top" [src]="equipment.displayurl" aria-controls="active"
+        style="max-height:200px;max-width:250px;">
+
+      <strong class="card-title">{{ equipment.name }}</strong>
+      <p class="card-text">{{ equipment.brand }}</p>
+      <p class="card-text">{{ equipment.model }}</p>
+      <p class="card-text">{{ equipment.serialNumber }}</p>
+      <p class="card-text">{{ equipment.price }}</p>
+      <p class="card-text">{{ equipment.imageUrl }}</p>
+    </a>
+    <button (click)="upvote(equipment.name)" [disabled]="voted">Like! ({{ votes }})</button>
+  </div>
+</div>
+<router-outlet></router-outlet>
